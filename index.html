@@ -22,13 +22,13 @@
     </section>
     <section class="tasks incomplete-tasks">
       <h3 class="tasks__title">Todo</h3>
-      <ul class="tasks__list todo" id="incompleteTasks">
+      <ul class="tasks__list todo">
         <li class="tasks__item">
           <input type="checkbox" class="tasks__checkbox">
           <label class="tasks__name">Pay Bills</label>
           <input type="text" class="tasks__input task__text">
-          <button class="tasks__btn edit">Edit</button>
-          <button class="tasks__btn delete">
+          <button class="tasks__btn edit-task">Edit</button>
+          <button class="tasks__btn delete-task">
             <img class="tasks__img-delete" src="./remove.svg" alt="">
           </button>
         </li>
@@ -36,23 +36,22 @@
           <input type="checkbox" class="tasks__checkbox">
           <label class="tasks__name">Go Shopping</label>
           <input type="text" value="Go Shopping" class="tasks__input task__text">
-          <button class="tasks__btn edit">Save</button>
-          <button class="tasks__btn delete">
+          <button class="tasks__btn edit-task">Save</button>
+          <button class="tasks__btn delete-task">
             <img class="tasks__img-delete" src="./remove.svg" alt="">
           </button>
         </li>
       </ul>
     </section>
-    <!-- TODO: добавить класс completed-tasks после его удаления для ul из CSS и JS -->
-    <section class="tasks ">
+    <section class="tasks completed-tasks">
       <h3 class="tasks__title">Completed</h3>
-      <ul class="tasks__list completed" id="completed-tasks">
+      <ul class="tasks__list completed">
         <li class="tasks__item">
           <input type="checkbox" class="tasks__checkbox" checked>
-          <label class="tasks__name">See the Doctor</label>
-          <input type="text" class="tasks__input task task__text">
-          <button class="tasks__btn edit">Edit</button>
-          <button class="tasks__btn delete">
+          <label class="completed-task">See the Doctor</label>
+          <input type="text" class="tasks__input task__text">
+          <button class="tasks__btn edit-task">Edit</button>
+          <button class="tasks__btn delete-task">
             <img class="tasks__img-delete" src="./remove.svg" alt="">
           </button>
         </li>
