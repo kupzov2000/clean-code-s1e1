@@ -98,12 +98,15 @@ var editTask=function(){
         //label becomes the inputs value.
         label.innerText=editInput.value;
         editBtn.innerText="Edit";
-    }else{
+        
+      }else{
         editInput.value=label.innerText;
         editBtn.innerText="Save";
+        label.classList.remove("completed-tasks-name");
     }
-
+    
     //toggle .task-edit on the parent.
+    label.classList.toggle("completed-tasks-name");
     listItem.classList.toggle("task-edit");
 };
 
@@ -128,6 +131,7 @@ var taskCompleted=function(){
     var listItem=this.parentNode;
     const label = listItem.querySelector('.tasks__name');
     label.className = 'completed-task';
+    label.classList.add("completed-tasks-name");
     completedTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
 }

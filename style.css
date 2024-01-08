@@ -145,3 +145,6 @@ button {
 .task-edit .tasks__name {
   display: none;
 }
+.task-edit .completed-tasks-name {
+  display: none;
+}
