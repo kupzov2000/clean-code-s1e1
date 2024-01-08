@@ -31,21 +31,25 @@ var createNewTaskElement=function(taskString){
     //button.delete
     var deleteButton=document.createElement("button");//delete button
     var deleteButtonImg=document.createElement("img");//delete button image
+
+    listItem.className = "tasks__item";
+    deleteButtonImg.className = "tasks__img-delete";
     
     label.innerText=taskString;
-    label.className='tasks__name';
+    label.className="tasks__name";
     editButton.className = "tasks__btn";
 
     //Each elements, needs appending
     checkBox.type="checkbox";
+    checkBox.className = "tasks__checkbox";
     editInput.type="text";
-    editInput.className="task__text";
+    editInput.className="task__text tasks__input delete-edit";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
     editButton.className="tasks__btn edit-task";
 
     deleteButton.className="tasks__btn delete-task";
-    deleteButtonImg.src='./remove.svg';
+    deleteButtonImg.src="./remove.svg";
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -86,11 +90,11 @@ var editTask=function(){
     var editInput=listItem.querySelector('input[type=text]');
     var label=listItem.querySelector("label");
     var editBtn=listItem.querySelector(".edit-task");
-    var containsClass=listItem.classList.contains("editMode");
-    //If class of the parent is .editmode
+    var containsClass=listItem.classList.contains("task-edit");
+    //If class of the parent is .task-edit
     if(containsClass){
 
-        //switch to .editmode
+        //switch to .task-edit
         //label becomes the inputs value.
         label.innerText=editInput.value;
         editBtn.innerText="Edit";
@@ -99,8 +103,8 @@ var editTask=function(){
         editBtn.innerText="Save";
     }
 
-    //toggle .editmode on the parent.
-    listItem.classList.toggle("editMode");
+    //toggle .task-edit on the parent.
+    listItem.classList.toggle("task-edit");
 };
 
 

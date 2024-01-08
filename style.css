@@ -22,6 +22,7 @@ button {
   display: block;
   text-align: right;
   font-family: fantasy, cursive;
+  margin-bottom: 15px;
 }
 .header__img {
   width: 100%;
@@ -46,18 +47,9 @@ button {
 }
 .task-row {
   display: flex;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
-/* ul {
-  margin:0;
-  padding: 0px;
-}
-li, h3 {
-  list-style:none;
-}
-input,button{
-  outline:none;
-} */
-
 .tasks__btn {
   background: none;
   border: 0px;
@@ -67,7 +59,6 @@ input,button{
   font-family: Lato, sans-serif;
   cursor: pointer;
 }
-button:hover,
 .tasks__btn:hover {
   color: #3a3a3a;
 }
@@ -81,7 +72,7 @@ button:hover,
   margin: 0;
   text-transform: uppercase;
 }
-input[type="text"] {
+.tasks__input {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -92,23 +83,19 @@ input[type="text"] {
   border-radius: 6px;
   font-family: Lato, sans-serif;
   color: #888;
+  width: 226px;
 }
-input[type="text"]:focus {
+.tasks__input:focus {
   color: #333;
 }
 
 /* New Task */
-/* TODO: УДАЛИТЬ LABEL ПОСЛЕ ДОБАВЛЕНИЯ отступа */
-label[for="new-task__input"] {
-  display: block;
-  margin: 0 0 20px;
-}
 .new-task__input {
   width: 318px;
 }
 
 /* Task list */
-li {
+.tasks__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -117,28 +104,26 @@ li {
   justify-content: space-between;
   align-items: center;
 }
-li > * {
+.tasks__item > * {
   vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+.tasks__checkbox {
   margin: 0 10px;
 }
-li > label {
+.completed-task, 
+.tasks__name {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
-li > input[type="text"] {
-  width: 226px
-}
-button.delete-task img {
+.tasks__img-delete{
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-button.delete-task img:hover {
+.tasks__img-delete:hover {
   transform: rotateZ(0);
 }
 
@@ -149,15 +134,15 @@ button.delete-task img:hover {
 }
 
 /* Edit Task */
-ul li input[type=text] {
+.delete-edit {
   display:none
 }
 
-ul li.editMode input[type=text] {
+.task-edit .tasks__input {
   display:inline-block;
   width:224px
 }
 
-ul li.editMode label {
+.task-edit .tasks__name {
   display:none;
 }
