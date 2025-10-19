@@ -40,10 +40,13 @@
   margin: 0;
   padding: 0px;
 }
-.tasks__item, .tasks__title {
+.tasks__item, 
+.tasks__title {
   list-style: none;
 }
-.tasks__input-checkbox,.tasks__input,.tasks__btn{
+.tasks__input-checkbox,
+.tasks__input,
+.tasks__btn {
   outline: none;
 }
 .tasks__btn {
